@@ -95,9 +95,9 @@ if (isset($_SESSION['user_id'])) {
 <?php endif; ?>
     <?php if ($result->num_rows > 0): ?>
         <?php while($row = $result->fetch_assoc()): ?>
-            <div class="service">
+            <div class="service" >
                 <img class="services" src="images/<?php echo $row['picture']; ?>" alt="<?php echo $row['name']; ?>">
-                <h2><?php echo $row['name']; ?></h2>
+                <h2  id="newpage"><?php echo $row['name']; ?></h2>
                 <p><?php echo $row['description']; ?></p>
                 <p>$<?php echo $row['price']; ?></p>
                 <?php if ($user_logged_in): ?>
@@ -115,7 +115,17 @@ if (isset($_SESSION['user_id'])) {
         <p>No services available.</p>
     <?php endif; ?>
 </div>
+<script> 
+document.getElementById("newpage").onclick = function() {go()};
+function go(){
+   // var opened = window.open("");
+//opened.document.write("<html><head><title><?php echo $row['name']; ?></title></head><body><h2><?php echo $row['name']; ?></h2><img class="services" src="images/<?php echo $row['picture']; ?>" alt="<?php echo $row['name']; ?>"><p><?php echo $row['description']; ?></p><p>$<?php echo $row['price']; ?></p></body></html>");
+document.getElementById("newpage").innerHTML = "YOU CLICKED ME!";
+}
 
+
+
+</script>
 
 
 </body>

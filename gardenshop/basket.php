@@ -69,6 +69,7 @@ function removeFromBasket($index) {
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="basket.css">
     <link rel="stylesheet" href="mystyle.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -86,6 +87,8 @@ function removeFromBasket($index) {
      <?php
 
 
+
+
 if (isset($_SESSION['user_id'])) {
     $session_active = true;
 } else {
@@ -100,7 +103,6 @@ if (isset($_SESSION['user_id'])) {
      
 
 </ul>
-
 <div class="basket-container">
     <?php if (empty($_SESSION['basket'])): ?>
         <p>Your basket is empty.</p>
@@ -131,6 +133,7 @@ if (isset($_SESSION['user_id'])) {
                 <input type="hidden" name="index" value="<?php echo $index; ?>">
                 <button type="submit">Remove</button>
             </form>
+           
         </td>
     </tr>
 <?php endforeach; ?>
@@ -143,6 +146,9 @@ if (isset($_SESSION['user_id'])) {
         </table>
     <?php endif; ?>
 </div>
+<br>
+<br>
+<br>
 
 </body>
 </html>

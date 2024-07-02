@@ -180,9 +180,9 @@ div.service{
 
 
 
-    background-color: #679186;
+    background-color: #89b6aa;
     color:#f2f2f2;
-      border:solid #253833;
+      border:solid #b3e2d6;
       border-radius: 5px;
       padding:20px;
       margin-bottom: 9px;
@@ -195,6 +195,7 @@ img.services{
 width:200px;
 height:150px;
 float:left;
+border-color:#253833;
 
 }
 
@@ -206,7 +207,6 @@ a.log{
   color:#78a399;
   text-decoration: none;
 }
-
 
 
 

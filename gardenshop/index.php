@@ -102,16 +102,16 @@ if (isset($_SESSION['user_id'])) {
         <section>
         <div id="contact" class="contact-section">
     <h2>Contact</h2>
-    <p><i class="fa fa-phone"></i> +40 746 099 123</p>
-    <p><i class="fa fa-envelope"></i> contact@WeGarden.com</p>
+    <p><i class="fa fa-phone"></i> <a href="tel:074-609-0123" > +40 746 099 123</a></p>
+    <p><i class="fa fa-envelope"></i> <a href="mailto:contact@WeGarden.com" > contact@WeGarden.com</a></p>
     <p><i class="fa fa-facebook"></i> <a href="https://facebook.com/WeGarden">WeGarden</a></p>
     </div>
     <section>
    
 
 
-
     
+
 
 
 </body>

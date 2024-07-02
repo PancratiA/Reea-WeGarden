@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if ($conn->query($insert_sql) === TRUE) {
             $_SESSION['user_id'] = $conn->insert_id;
-            echo "success"; 
+            header("Location: services.php");
             exit();
         } else {
             echo "Error: " . $insert_sql . "<br>" . $conn->error;
@@ -65,12 +65,12 @@ document.getElementById("register-form").addEventListener("submit", function(eve
     .then(response => response.text())
     .then(data => {
         if (data === 'success') {
-            alert('Registration successful!');
+            //alert('Registration successful!');
             closeRegister();
             header("Location: services.php");
             exit();
         } else {
-            alert(data); 
+          //  alert(data); 
         }
     })
     .catch(error => console.error('Error:', error));
